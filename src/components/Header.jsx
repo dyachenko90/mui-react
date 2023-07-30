@@ -12,11 +12,9 @@ const Header = () => {
   const dispatch = useDispatch();
   const order = useSelector((state) => state.cart.cart);
 
-
   const handleOpenCart = () => {
     dispatch(openCart());
   };
-
 
   const orderLength = order.reduce(
     (acc, currentValue) => acc + currentValue.quantity,
